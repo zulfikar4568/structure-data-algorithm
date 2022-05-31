@@ -119,4 +119,92 @@ export class BST {
     }
     this.root = removeNode(this.root, data);
   }
+
+  public findMinHeight(node: Node | null = this.root) {
+    if (node === null) return -1;
+    let left: number = this.findMinHeight(node.left);
+    let right: number = this.findMinHeight(node.right);
+    if (left < right) {
+      return left + 1;
+    } else {
+      return right + 1;
+    }
+  }
+
+  public findMaxHeight(node: Node | null = this.root) {
+    if (node === null) return -1;
+    let left: number = this.findMaxHeight(node.left);
+    let right: number = this.findMaxHeight(node.right);
+    if (left > right) {
+      return left + 1;
+    } else {
+      return right + 1;
+    }
+  }
+
+  public inOrder() {
+    if (this.root === null) {
+      return null;
+    } else {
+      let result = new Array();
+      function traverseInOrder(node: Node) {
+        node.left && traverseInOrder(node.left);
+        result.push(node.data);
+        node.right && traverseInOrder(node.right);
+      }
+      traverseInOrder(this.root);
+      return result;
+    }
+  }
+
+  public preOrder() {
+    if (this.root === null) {
+      return null;
+    } else {
+      let result = new Array();
+      function traverseInOrder(node: Node) {
+        result.push(node.data);
+        node.left && traverseInOrder(node.left);
+        node.right && traverseInOrder(node.right);
+      }
+      traverseInOrder(this.root);
+      return result;
+    }
+  }
+
+  public postOrder() {
+    if (this.root === null) {
+      return null;
+    } else {
+      let result = new Array();
+      function traverseInOrder(node: Node) {
+        node.left && traverseInOrder(node.left);
+        node.right && traverseInOrder(node.right);
+        result.push(node.data);
+      }
+      traverseInOrder(this.root);
+      return result;
+    }
+  }
+
+  public levelOrder() {
+    let result = [];
+    let Queue = [];
+    if (this.root != null) {
+      Queue.push(this.root);
+      while (Queue.length > 0) {
+        let node: Node = Queue.shift();
+        result.push(node.data);
+        if (node.left !== null) {
+          Queue.push(node.left);
+        }
+        if (node.right !== null) {
+          Queue.push(node.right);
+        }
+      }
+      return result;
+    } else {
+      return null;
+    }
+  }
 }
