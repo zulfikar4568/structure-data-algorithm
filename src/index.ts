@@ -9,6 +9,7 @@ let myStack = new Stack();
 myStack.push('a');
 myStack.push('b');
 myStack.push('c');
+myStack.push('e');
 console.log('Peek : ' + myStack.peek());
 console.log('Pop  : ' + myStack.pop());
 console.log('Peek : ' + myStack.peek());
@@ -38,6 +39,7 @@ let myQueue = new Queue();
 myQueue.enqueue("a");
 myQueue.enqueue("b");
 myQueue.enqueue("c");
+myQueue.enqueue("d");
 myQueue.print();
 myQueue.dequeue();
 console.log(myQueue.front());
@@ -57,21 +59,21 @@ antrianKasir.print()
 //BST
 const bst = new BST();
 
-bst.add(9);
-bst.add(1);
-bst.add(4);
+bst.add(8);
 bst.add(3);
-bst.add(17);
+bst.add(10);
+bst.add(1);
 bst.add(6);
-bst.add(22);
-bst.add(5);
+bst.add(14);
+bst.add(4);
 bst.add(7);
+bst.add(13);
 bst.add(20);
 
 console.log(bst.findMin())
 console.log(bst.findMax())
 console.log(bst.find(9))
-bst.remove(4)
+bst.remove(20)
 console.log(bst.find(9))
 console.log(bst.findMinHeight())
 console.log(bst.findMaxHeight())
