@@ -58,6 +58,11 @@
     a <------- | b | c | d | e | <-------- f
               ------------------
     ```
+  - Penjelasan: </br>
+      - Enqueue digunakan untuk insert data di akhir element
+      - Dequeue digunakan untuk mengeluarkan data pada element terakhir
+      - Size untuk mengetahui panjang queue
+      - isEmpty digunakan untuk mengecek apakah data kosong
 ## Binary Search Tree
   - Ilustrasi:
     ```
@@ -70,3 +75,11 @@
               4     7  13 <-------------- Leaf (4,7,13)
           Left Sub Tree (3, 1, 6) dan Right Sub Tree (10, 14)
     ```
+  - Penjelasan:
+    - 1 Buah node memiliki 2 child (left node dan right node) dan memiliki 1 buah data
+    - Add untuk menambahkan data ke node, dan data akan dimasukan secara otomatis, jika nilai nya lebih kecil dari nilai node itu sendiri maka akan di masukan ke kiri. jika lebih besar akan dimasukan ke node kanan.
+    - Find Untuk mencari node yang menyimpan data yang akan kita cari
+    - FindMin digunakan untuk mencari nilai terkecil
+    - FindMax digunakan untuk mencari nilai terbesar
+    - remove digunakan untuk menghapus yang menyimpan data dengan parameter yang akan kita hapus.
+    - FindMinHeight dan FindMaxHeight digunakan untuk mengetahui tinggi dari node
