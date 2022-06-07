@@ -1,7 +1,8 @@
-import { BST } from "./binary-search-tree";
-import { PriorityQueue, Queue } from "./queue";
-import { MySet } from "./set";
-import { palindrome, Stack } from "./stack";
+import { checkMatchItem, checkMatchItemHashMap, checkMatchItemModern, sumPairArrayHas, sumPairArrayHas2 } from "./2.solveInterview";
+import { BST } from "./random/binary-search-tree";
+import { PriorityQueue, Queue } from "./random/queue";
+import { MySet } from "./random/set";
+import { palindrome, Stack } from "./random/stack";
 
 //Stack
 console.log(palindrome('racecar'))
@@ -81,3 +82,16 @@ console.log('in Order: ' + bst.inOrder())
 console.log('pre Order: ' + bst.preOrder())
 console.log('post Order: ' + bst.postOrder())
 console.log('level Order: ' + bst.levelOrder())
+
+
+let array1: string[] = ['a', 'b', 'c', 'd']
+let array2: string[] = ['x', 'y', 'z', 'a']
+
+console.log(checkMatchItem(array1, array2))
+console.log(checkMatchItemHashMap(array1, array2))
+console.log(checkMatchItemModern(array1, array2))
+
+let sum = 8
+let pairArray: number[] = [1, 2, 3, 4, 6]
+console.log(sumPairArrayHas(pairArray, sum))
+console.log(sumPairArrayHas2(pairArray, sum))

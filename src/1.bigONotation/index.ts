@@ -44,7 +44,6 @@ anotherFunChallenge([2,3,1,3,4]) //O(4 + 5n) = O(n)
 
 
 //Log all pairs of array
-
 const boxes = ['a', 'b', 'c', 'd', 'e'];
 function logAllPairsOfArray(array: string[]) {
   for (let i = 0; i < array.length; i++) {
@@ -53,7 +52,6 @@ function logAllPairsOfArray(array: string[]) {
     }
   }
 }
-
 logAllPairsOfArray(boxes) // O(n*n) = O(n^2)
 
 function nFacRuntimeFunc(n: number): number {
@@ -65,7 +63,6 @@ console.log(nFacRuntimeFunc(4)) // O(n!) = n * (n-1) * (n-2) * (n-3) ....
 
 
 // Space Complexity (Depend on Memory)
-
 function halooo (n: number) {
   for(let i = 0;i < n; i++) {
     console.log('hallooo')

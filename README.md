@@ -1,5 +1,8 @@
 # Structure Data Algorithm
 
+- [Big O Notation](./src/1.bigONotation)
+- [Tips Solve Problem](./src/2.solveInterview)
+
 ## Stack
 - ### Palindrome
   - Input:
