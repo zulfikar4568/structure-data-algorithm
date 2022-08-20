@@ -85,4 +85,6 @@
     - FindMin digunakan untuk mencari nilai terkecil
     - FindMax digunakan untuk mencari nilai terbesar
     - remove digunakan untuk menghapus yang menyimpan data dengan parameter yang akan kita hapus.
-    - FindMinHeight dan FindMaxHeight digunakan untuk mengetahui tinggi dari node
+    - FindMinHeight dan FindMaxHeight digunakan untuk mengetahui tinggi dari node.
+
+[MindMap](https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link)

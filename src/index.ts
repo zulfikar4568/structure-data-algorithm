@@ -1,4 +1,5 @@
 import { checkMatchItem, checkMatchItemHashMap, checkMatchItemModern, sumPairArrayHas, sumPairArrayHas2 } from "./2.solveInterview";
+import { learnArray, mergeSortedArray, myReverseString, reverseString, reverseString2, reverseString3 } from "./3.array";
 import { BST } from "./random/binary-search-tree";
 import { PriorityQueue, Queue } from "./random/queue";
 import { MySet } from "./random/set";
@@ -95,3 +96,12 @@ let sum = 8
 let pairArray: number[] = [1, 2, 3, 4, 6]
 console.log(sumPairArrayHas(pairArray, sum))
 console.log(sumPairArrayHas2(pairArray, sum))
+
+
+//********************************************ARRAY*********************************************/
+learnArray();
+console.log(myReverseString("zul"));
+console.log(reverseString("zul"));
+console.log(reverseString2("zul"));
+console.log(reverseString3("zul"));
+console.log(mergeSortedArray([0,3,4,31], [4,6,30]))
