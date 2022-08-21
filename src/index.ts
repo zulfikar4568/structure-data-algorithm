@@ -4,6 +4,8 @@ import { bubbleSort } from "./3.array/bubble-sort";
 import { selectionSort } from "./3.array/selection-sort";
 import { firstRequrring, firstRequrring2, HashTable } from "./4.hash-table";
 import { DoublyLinkedList, SinglyLinkedList } from "./5.linked-list";
+import { ArrayStack, LinkedStack } from "./6.stack";
+import { LinkedQueue } from "./7.queue";
 import { BST } from "./random/binary-search-tree";
 import { PriorityQueue, Queue } from "./random/queue";
 import { MySet } from "./random/set";
@@ -135,8 +137,9 @@ myLinkedList.append(9)
 myLinkedList.prepend(34)
 myLinkedList.insert(1, "saya")
 myLinkedList.insert(100, "terakhir")
-myLinkedList.reverse()
+// myLinkedList.reverse()
 console.dir(myLinkedList, { depth: null })
+console.log(myLinkedList.exists(6))
 
 console.log('//********************************************Linked List Singly*********************************************/')
 const myLinkedList2 = new SinglyLinkedList(19);
@@ -146,3 +149,41 @@ myLinkedList2.insert(1, "saya")
 console.dir(myLinkedList2, { depth: null })
 myLinkedList2.reverse()
 console.dir(myLinkedList2, { depth: null })
+
+
+//********************************************Stack*********************************************/
+
+console.log('//********************************************Stack*********************************************/')
+
+const myLinkedStack = new LinkedStack();
+myLinkedStack.push('noval')
+myLinkedStack.push('isnen')
+myLinkedStack.push('arif')
+console.dir(myLinkedStack, { depth: null })
+myLinkedStack.pop()
+myLinkedStack.pop()
+myLinkedStack.pop()
+console.dir(myLinkedStack, { depth: null })
+
+const myArrayStack = new ArrayStack();
+myArrayStack.push('noval')
+myArrayStack.push('isnen')
+myArrayStack.push('arif')
+console.dir(myArrayStack, { depth: null })
+myArrayStack.pop()
+myArrayStack.pop()
+myArrayStack.pop()
+console.dir(myArrayStack, { depth: null })
+
+
+//********************************************Queue*********************************************/
+
+console.log('//********************************************Queue*********************************************/')
+const myLinkedQueue = new LinkedQueue();
+myLinkedQueue.enqueue('noval')
+myLinkedQueue.enqueue('isnen')
+myLinkedQueue.enqueue('arif')
+console.dir(myLinkedQueue, { depth: null })
+myLinkedQueue.dequeue();
+myLinkedQueue.dequeue();
+console.dir(myLinkedQueue, { depth: null })

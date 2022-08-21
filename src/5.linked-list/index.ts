@@ -97,6 +97,17 @@ export class SinglyLinkedList {
     return this;
   }
 
+  public exists(value: any): boolean {
+    let current: INodeSingly | null = this.head;
+    while(current !== null) {
+      if (current.value == value) {
+        return true
+      }
+      current = current?.next
+    }
+    return false
+  }
+
   private traverseToIndex(index: number) {
     let counter = 0;
     let currentNode: INodeSingly | null = this.head;
@@ -217,6 +228,17 @@ export class DoublyLinkedList {
       current = current.prev;
     }
     return this
+  }
+
+  public exists(value: any): boolean {
+    let current: INodeDoubly | null = this.head;
+    while(current !== null) {
+      if (current.value == value) {
+        return true
+      }
+      current = current?.next
+    }
+    return false
   }
 
   private traverseToIndex(index: number) {
