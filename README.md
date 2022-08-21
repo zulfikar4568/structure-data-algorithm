@@ -3,6 +3,39 @@
 - [Big O Notation](./src/1.bigONotation)
 - [Tips Solve Problem](./src/2.solveInterview)
 
+
+## Hash Table
+- Ilustration:
+  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hash_table_5_0_1_1_1_1_0_LL.svg/2880px-Hash_table_5_0_1_1_1_1_0_LL.svg.png)
+
+[Wiki](https://en.wikipedia.org/wiki/Hash_table)
+
+## Linked List
+- Ilustration:
+  - Jika di array misal, keranjang = [jeruk, mangga, apel]
+  - Jika di linked list,
+    Linked List Doubly, mempunyai next and prev data
+    ```yml
+    keranjang = jeruk <-|
+       null <--- 7923 --+-> mangga <-|
+                        |--- 7230 ---+--> apel
+                                     |--- 7823 --> null
+
+    (Jeruk = head)
+    (Apel = tail)
+    ```
+
+    Linked list Singly, hanya mempunyai next data
+    ```yml
+    keranjang = jeruk
+                7923 ---> mangga
+                          7230 ---> apel
+                                    7823 --> null
+
+    (Jeruk = head)
+    (Apel = tail)
+    ```
+[Visualization](https://visualgo.net/en/list)
 ## Stack
 - ### Palindrome
   - Input:

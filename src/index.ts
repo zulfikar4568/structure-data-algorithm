@@ -1,11 +1,15 @@
 import { checkMatchItem, checkMatchItemHashMap, checkMatchItemModern, sumPairArrayHas, sumPairArrayHas2 } from "./2.solveInterview";
 import { learnArray, mergeSortedArray, myReverseString, reverseString, reverseString2, reverseString3 } from "./3.array";
+import { bubbleSort } from "./3.array/bubble-sort";
+import { selectionSort } from "./3.array/selection-sort";
+import { firstRequrring, firstRequrring2, HashTable } from "./4.hash-table";
+import { DoublyLinkedList, SinglyLinkedList } from "./5.linked-list";
 import { BST } from "./random/binary-search-tree";
 import { PriorityQueue, Queue } from "./random/queue";
 import { MySet } from "./random/set";
 import { palindrome, Stack } from "./random/stack";
 
-//Stack
+//********************************************Stack*********************************************/
 console.log(palindrome('racecar'))
 let myStack = new Stack();
 myStack.push('a');
@@ -18,7 +22,7 @@ console.log('Peek : ' + myStack.peek());
 console.log('Size : ' + myStack.size());
 
 
-//Set
+//********************************************Set*********************************************/
 let setA = new MySet();
 let setB = new MySet();
 setA.add("a");
@@ -36,7 +40,7 @@ console.log("difference: " + setA.difference(setB).values())
 console.log("intersection: " + setA.intersection(setB).values())
 
 
-//Queue
+//********************************************Queue*********************************************/
 let myQueue = new Queue();
 myQueue.enqueue("a");
 myQueue.enqueue("b");
@@ -58,7 +62,7 @@ antrianKasir.enqueue(["Presiden 1", 1]);
 antrianKasir.print()
 
 
-//BST
+//********************************************BST*********************************************/
 const bst = new BST();
 
 bst.add(8);
@@ -105,3 +109,40 @@ console.log(reverseString("zul"));
 console.log(reverseString2("zul"));
 console.log(reverseString3("zul"));
 console.log(mergeSortedArray([0,3,4,31], [4,6,30]))
+console.log(selectionSort([98,23,54,12,3]))
+console.log(bubbleSort([98,23,54,12,3]))
+
+//********************************************HASH TABLE*********************************************/
+const ht = new HashTable(1);
+ht.set("zul", 24)
+ht.set("rico", 44)
+console.log(ht)
+console.log(ht.get("rico"))
+console.log(ht.keys())
+
+//Implementation
+console.log(firstRequrring([1,2,3,3]))
+console.log(firstRequrring2([1,5,4,3,9,3,2]))
+
+//********************************************Linked List*********************************************/
+
+console.log('//********************************************Linked List Doubly*********************************************/')
+const myLinkedList = new DoublyLinkedList(4);
+myLinkedList.append(6)
+myLinkedList.append(3)
+myLinkedList.append(7)
+myLinkedList.append(9)
+myLinkedList.prepend(34)
+myLinkedList.insert(1, "saya")
+myLinkedList.insert(100, "terakhir")
+myLinkedList.reverse()
+console.dir(myLinkedList, { depth: null })
+
+console.log('//********************************************Linked List Singly*********************************************/')
+const myLinkedList2 = new SinglyLinkedList(19);
+myLinkedList2.append(12)
+myLinkedList2.prepend(34)
+myLinkedList2.insert(1, "saya")
+console.dir(myLinkedList2, { depth: null })
+myLinkedList2.reverse()
+console.dir(myLinkedList2, { depth: null })
