@@ -6,7 +6,8 @@ import { firstRequrring, firstRequrring2, HashTable } from "./4.hash-table";
 import { DoublyLinkedList, SinglyLinkedList } from "./5.linked-list";
 import { ArrayStack, LinkedStack } from "./6.stack";
 import { LinkedQueue } from "./7.queue";
-import { BST } from "./random/binary-search-tree";
+import { BinarySearchTree } from "./8.trees";
+import { BST } from "./8.trees/binary-search-tree";
 import { PriorityQueue, Queue } from "./random/queue";
 import { MySet } from "./random/set";
 import { palindrome, Stack } from "./random/stack";
@@ -187,3 +188,16 @@ console.dir(myLinkedQueue, { depth: null })
 myLinkedQueue.dequeue();
 myLinkedQueue.dequeue();
 console.dir(myLinkedQueue, { depth: null })
+
+//********************************************BST*********************************************/
+
+console.log('//********************************************BST*********************************************/')
+const myBinarySearchTree = new BinarySearchTree();
+myBinarySearchTree.insert(20);
+myBinarySearchTree.insert(5);
+myBinarySearchTree.insert(30);
+console.dir(myBinarySearchTree, { depth: null })
+myBinarySearchTree.remove(30);
+myBinarySearchTree.insert(4);
+console.dir(myBinarySearchTree, { depth: null })
+console.dir(myBinarySearchTree.lookup(50), { depth: null })
