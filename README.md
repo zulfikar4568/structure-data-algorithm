@@ -120,4 +120,63 @@
     - remove digunakan untuk menghapus yang menyimpan data dengan parameter yang akan kita hapus.
     - FindMinHeight dan FindMaxHeight digunakan untuk mengetahui tinggi dari node.
 
+## Graph
+
+- Tipe Graph:
+  - Directed atau Undirected
+    ```yaml
+    // Directed               // Undirected
+    0 ----> 1 ---> 4          0 ----- 1 ---- 4
+    |       ^                 |       |
+    |       |                 |       |
+    v       |                 |       |
+    2 ----> 3                 2 ------3
+    ```
+  - Weighted atau Unweighted
+     ```yaml
+      // Weighted                // Unweighted
+      0 --23-- 1 --43- 4         0 ----- 1 ---- 4
+      |        |                 |       |
+     100       33                |       |
+      |        |                 |       |
+      2 --10-- 3                 2 ------3
+    ```
+
+  - Cyclic atau Acyclic
+    ```yaml
+              1                      1
+             / |                      |
+            /  |                      |
+           /   |                      |
+          2 -- 3                 2 -- 3
+    ```
+
+Berikut contoh graph, Undirected, Unweighted, Cyclic
+```yaml
+           2 ----- 0
+          / \
+         /   \
+        1 --- 3
+```
+Maka data tersebut akan memperepresentasikan graph:
+
+```ts
+//Menggambarkan koneksi
+const edgetList = [[0,2], [2,3], [2,1], [1,3]]
+const adjacentList = 
+  [
+    [2], // node 0 konek ke node 2
+    [2,3], // node 1 konek ke node 2, 3
+    [0,1,3], // node 3 konek ke node 0, 1, 3
+    [1,2] // node 3 konek ke node 1, 2
+  ]
+const adjacentMatrix = 
+  [    0,1,2,3
+   0: [0,0,1,0], // node 0 konek ke node 2
+   1: [0,0,1,1], // node 1 konek ke node 2, 3
+   2: [1,1,0,1], // node 3 konek ke node 0, 1, 3
+   3: [0,1,1,0] // node 3 konek ke node 1, 2
+  ]
+```
+
 [MindMap](https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link)

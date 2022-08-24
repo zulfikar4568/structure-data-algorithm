@@ -8,6 +8,7 @@ import { ArrayStack, LinkedStack } from "./6.stack";
 import { LinkedQueue } from "./7.queue";
 import { BinarySearchTree } from "./8.trees";
 import { BST } from "./8.trees/binary-search-tree";
+import { Graph } from "./9.graph";
 import { PriorityQueue, Queue } from "./random/queue";
 import { MySet } from "./random/set";
 import { palindrome, Stack } from "./random/stack";
@@ -127,8 +128,8 @@ console.log(ht.keys())
 console.log(firstRequrring([1,2,3,3]))
 console.log(firstRequrring2([1,5,4,3,9,3,2]))
 
-//********************************************Linked List*********************************************/
 
+//********************************************Linked List*********************************************/
 console.log('//********************************************Linked List Doubly*********************************************/')
 const myLinkedList = new DoublyLinkedList(4);
 myLinkedList.append(6)
@@ -152,8 +153,8 @@ myLinkedList2.reverse()
 console.dir(myLinkedList2, { depth: null })
 
 
-//********************************************Stack*********************************************/
 
+//********************************************Stack*********************************************/
 console.log('//********************************************Stack*********************************************/')
 
 const myLinkedStack = new LinkedStack();
@@ -177,8 +178,8 @@ myArrayStack.pop()
 console.dir(myArrayStack, { depth: null })
 
 
-//********************************************Queue*********************************************/
 
+//********************************************Queue*********************************************/
 console.log('//********************************************Queue*********************************************/')
 const myLinkedQueue = new LinkedQueue();
 myLinkedQueue.enqueue('noval')
@@ -189,8 +190,8 @@ myLinkedQueue.dequeue();
 myLinkedQueue.dequeue();
 console.dir(myLinkedQueue, { depth: null })
 
-//********************************************BST*********************************************/
 
+//********************************************BST*********************************************/
 console.log('//********************************************BST*********************************************/')
 const myBinarySearchTree = new BinarySearchTree();
 myBinarySearchTree.insert(20);
@@ -201,3 +202,25 @@ myBinarySearchTree.remove(30);
 myBinarySearchTree.insert(4);
 console.dir(myBinarySearchTree, { depth: null })
 console.dir(myBinarySearchTree.lookup(50), { depth: null })
+
+//********************************************Graph*********************************************/
+console.log('//********************************************Graph*********************************************/')
+let myGraph = new Graph();
+myGraph.adVertex('0');
+myGraph.adVertex('1');
+myGraph.adVertex('2');
+myGraph.adVertex('3');
+myGraph.adVertex('4');
+myGraph.adVertex('5');
+myGraph.adVertex('6');
+myGraph.addEdge('3', '1'); 
+myGraph.addEdge('3', '4'); 
+myGraph.addEdge('4', '2'); 
+myGraph.addEdge('4', '5'); 
+myGraph.addEdge('1', '2'); 
+myGraph.addEdge('1', '0'); 
+myGraph.addEdge('0', '2'); 
+myGraph.addEdge('6', '5');
+
+myGraph.showConnection();
+console.dir(myGraph, { depth: null })
