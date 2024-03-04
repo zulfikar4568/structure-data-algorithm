@@ -1,17 +1,17 @@
 export class Graph {
   public numberOfNode: number;
-  public adjacentList: any;
+  public adjacentList: Record<string, string[]>;
   constructor() {
     this.numberOfNode = 0;
     this.adjacentList = {};
   }
 
-  adVertex(node: any) {
+  adVertex(node: string) {
     this.adjacentList[node] = [];
     this.numberOfNode++;
   }
 
-  addEdge(node1: any, node2: any) {
+  addEdge(node1: string, node2: string) {
     this.adjacentList[node1].push(node2);
     this.adjacentList[node2].push(node1);
   }
